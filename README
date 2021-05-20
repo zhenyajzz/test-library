@@ -1,0 +1,116 @@
+1)The main activity of the project is to save users,books and to do some requests
+
+2)A library that has class User , Book and enum class Role
+
+3)Executing queries: getting, updating, put , deleting and some own methods
+
+4)Password login admin and user
+
+5)What is need for a work?
+Adding dependency:
+- mysql - connector
+- lombok
+- spring - security
+- spring - data - jpa
+- spring - actuator
+- spring - web.
+
+6)We have tests for controller and repository
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Adding dependency: mysql - connector, lombok, spring - security, spring - data - jpa, spring - actuator, spring - web
+
+First step it - created two entity and one enum class with names User, Book and Role
+
+Everything is working!
+
+
+
+Second step it - created Repository for User and Book
+Created custom methods in BookRepository with name:
+ - findBookByBookName
+ - findBookByCategory
+ - findBooksSortedByCategoryDesc
+ - findSortedBooksByBookNameAsc
+
+Everything is working!
+
+
+
+Third step it - created Controller for User and Book
+In controller has:
+- findAll
+- findBookById
+- updateUser
+- deleteBookById
+- findBookByBookName
+- findBookByCategory
+- findOrderCategory
+- findBooksByBookName
+
+Everything is working!
+
+
+
+Fourth step it - created class SecurityConfig
+There are had access for ADMIN and USER.
+ADMIN had GET, POST , PUT and DELETE.
+USER had only GET.
+I created @Bean for object passwordEncoder for passwords ADMIN and USER
+
+Everything is working!
+
+
+
+Fifth step it - i created test for BookController and BookRepository
+They are had name BookControllerTest and BookRepositoryTest
+There are had:
+- givenAuthRequestOnPrivateService_shouldSucceedWith200
+- findAll
+- findBookById
+- findBookByBookName
+
+Everything is working!
+
+
+
+Sixth step it - created tests in postman
+There are methods how:
+- findAllBooks
+- findBookByBookName
+- post method
+- put method
+- delete method
+
+Everything is working!
